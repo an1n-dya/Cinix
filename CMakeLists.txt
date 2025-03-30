@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(Cinix VERSION 0.1.0 LANGUAGES C)
+project(Cinix VERSION 1.0.0 LANGUAGES C)
 
 if(NOT (CMAKE_SYSTEM_NAME STREQUAL "Windows" OR CMAKE_SYSTEM_NAME STREQUAL "Linux"))
     message(FATAL_ERROR "Unsupported platform. Only Windows and Linux are supported.")
@@ -42,6 +42,7 @@ target_include_directories(cinix PRIVATE
     src
     src/engine
     ${CMAKE_BINARY_DIR}/include
+    vendor/linmath
 )
 
 target_link_libraries(cinix PRIVATE
